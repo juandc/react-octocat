@@ -1,0 +1,25 @@
+{
+  "name": "react-octocat",
+  "version": "0.1.0",
+  "description": "React JS Github Clone",
+  "main": "build/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juandc/react-octocat.git"
+  },
+  "keywords": [
+    "react-octocat",
+    "react-github",
+    "react-github-api",
+    "@juandc"
+  ],
+  "author": "Juan David Castro <juandavidcastrogallego@gmail.com> (http://juandc.co/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/juandc/react-octocat/issues"
+  },
+  "homepage": "https://github.com/juandc/react-octocat#readme"
+}

@@ -1,2 +1,2 @@
-# react-octocat
+# React Octocat
 React JS Github Clone
