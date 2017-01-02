@@ -4,7 +4,8 @@
   "description": "React JS Github Clone",
   "main": "build/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack",
+    "dev": "nodemon -e js,jsx build/server & webpack -w"
   },
   "repository": {
     "type": "git",
@@ -21,5 +22,26 @@
   "bugs": {
     "url": "https://github.com/juandc/react-octocat/issues"
   },
-  "homepage": "https://github.com/juandc/react-octocat#readme"
+  "homepage": "https://github.com/juandc/react-octocat#readme",
+  "dependencies": {
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "react-router": "^4.0.0-alpha.6"
+  },
+  "devDependencies": {
+    "babel-core": "^6.21.0",
+    "babel-eslint": "^7.1.1",
+    "babel-loader": "^6.2.10",
+    "babel-preset-latest-minimal": "^1.1.2",
+    "babel-preset-react": "^6.16.0",
+    "eslint": "^3.12.2",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-loader": "^1.6.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.8.0",
+    "json-loader": "^0.5.4",
+    "nodemon": "^1.11.0",
+    "webpack": "^1.14.0"
+  }
 }
