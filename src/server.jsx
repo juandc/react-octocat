@@ -1,9 +1,10 @@
 import http from 'http'
 import React from 'react'
-import { renderToString } from 'react-dom/server'
+import { renderToString, renderToStaticMarkup } from 'react-dom/server'
 import { ServerRouter, createServerRenderContext } from 'react-router'
 // Components
 import Routes from './routes'
+import Layout from './components/Layout'
 
 const PORT = process.env.PORT || 3000
 
@@ -35,12 +36,21 @@ function requestHandler(req, res) {
     res.end()
   }
 
-  res.write(html)
+  res.write(
+    renderToStaticMarkup(
+      <Layout
+        title="React Octocat"
+        content={html}
+      />,
+    ),
+  )
   res.end()
 }
 
 const server = http.createServer(requestHandler)
 
-server.listen(PORT)
+server.on('listening', () => {
+  console.log('\nListening %s PORT\n', PORT)
+})
 
-console.log('\nListening %s\n', PORT)
+server.listen(PORT)

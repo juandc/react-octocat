@@ -5,6 +5,7 @@ import {
 } from 'react-router'
 // Components
 import Home from './Home'
+import User from './User'
 import NotFound from './NotFound'
 
 function Routes() {
@@ -14,6 +15,10 @@ function Routes() {
         pattern="/"
         component={Home}
         exactly
+      />
+      <Match
+        pattern="/user/:user"
+        component={User}
       />
       <Miss component={NotFound} />
     </mail>
