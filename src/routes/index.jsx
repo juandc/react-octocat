@@ -2,18 +2,26 @@ import React from 'react'
 import {
   Match,
   Miss,
+  Redirect,
 } from 'react-router'
 // Components
-import Home from './Home'
+import Repositories from './Repositories'
 import User from './User'
+import Menu from '../components/Menu'
 import NotFound from './NotFound'
 
 function Routes() {
   return (
     <mail role="application">
+      <Menu />
       <Match
         pattern="/"
-        component={Home}
+        render={() => <Redirect to="/repositories" />}
+        exactly
+      />
+      <Match
+        pattern="/repositories"
+        component={Repositories}
         exactly
       />
       <Match

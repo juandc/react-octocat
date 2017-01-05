@@ -1,4 +1,6 @@
 import React from 'react'
+// Global Styles
+import '../../styles/style.css'
 
 function Layout(props) {
   return (
@@ -16,11 +18,15 @@ function Layout(props) {
         />
         <link
           rel="stylesheet"
+          href="//localhost:3001/app.css"
+        />
+        <link
+          rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Open+Sans|Lato"
         />
         <link
           rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
         />
       </head>
       <body>

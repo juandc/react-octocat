@@ -1,3 +1,5 @@
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+
 module.exports = {
   entry: './src/server.jsx',
   output: {
@@ -14,6 +16,10 @@ module.exports = {
     ],
     loaders: [
       {
+        test: /\.css$/,
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader!stylus-loader'),
+      },
+      {
         test: /\.json$/,
         loader: 'json',
       },
@@ -27,6 +33,9 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new ExtractTextPlugin('../build/static/app.css'),
+  ],
   resolve: { extensions: ['', '.js', '.jsx'] },
   target: 'node',
 }

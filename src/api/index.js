@@ -21,6 +21,11 @@ const api = {
       const data = await response.json()
       return data
     },
+    async getPopularRepos(repo = 'react') {
+      const response = await fetch(`${url}/search/repositories?q=${repo}&sort=stars&per_page=9`)
+      const data = await response.json()
+      return data
+    },
   },
 }
 
